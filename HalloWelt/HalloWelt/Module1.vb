@@ -1,8 +1,12 @@
-﻿Module Module1
+﻿Imports System.Globalization
+Imports System.Text
+
+Module Module1
 
     Sub Main()
+        Console.OutputEncoding = Encoding.UTF8
 
-        Console.WriteLine("Hallo Welt")
+        Console.WriteLine($"Hallo Welt {Date.Now.ToString("HH<<<mm>>ss")}")
 
         Dim eingabe As String
         eingabe = Console.ReadLine()
@@ -15,7 +19,8 @@
             Console.WriteLine($"Das doppelte: {dasDoppelte}")
 
             Dim eingabeAlsDecimal As Decimal = CDec(eingabeAlsZahl)
-            Console.WriteLine($"Eingabe als decimal: {eingabeAlsDecimal}")
+            Console.WriteLine($"Eingabe als decimal: {eingabeAlsDecimal:c}")
+            Console.WriteLine($"Eingabe als decimal: {eingabeAlsDecimal.ToString("c", New CultureInfo("en-US"))}")
 
         Else
             Console.WriteLine("Das war keine Zahl!")
