@@ -1,4 +1,5 @@
-﻿Imports System.Runtime.InteropServices
+﻿Imports System.IO
+Imports System.Runtime.InteropServices
 
 Module Module1
 
@@ -30,6 +31,9 @@ Module Module1
         ShowFahrzeug(deinAuto)
         MachDoppelSoSchnell(deinAuto)
         ShowFahrzeug(deinAuto)
+
+        Dim unserAuto = New Fahrzeug()
+        ShowFahrzeug(unserAuto)
 
 
         Console.WriteLine("ENDE")
