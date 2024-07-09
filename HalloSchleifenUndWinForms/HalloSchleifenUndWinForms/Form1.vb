@@ -1,6 +1,9 @@
 ﻿Imports System.Runtime.InteropServices
 
 Public Class Form1
+
+
+
     Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         For index = 0 To 10 Step 3
@@ -30,6 +33,15 @@ Public Class Form1
         For Each item In ListBox1.Items
             MessageBox.Show(item)
         Next
+
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Text = My.Resources.Titel
+        BackColor = My.Settings.FARBEEE
+
+
+        Dim b = New Button()
 
     End Sub
 End Class

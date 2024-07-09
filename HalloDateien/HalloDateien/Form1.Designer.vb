@@ -29,6 +29,7 @@ Partial Class Form1
         Button4 = New Button()
         TextBox1 = New TextBox()
         SaveFileDialog1 = New SaveFileDialog()
+        Button5 = New Button()
         FlowLayoutPanel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -41,6 +42,7 @@ Partial Class Form1
         FlowLayoutPanel1.Controls.Add(Button2)
         FlowLayoutPanel1.Controls.Add(Button3)
         FlowLayoutPanel1.Controls.Add(Button4)
+        FlowLayoutPanel1.Controls.Add(Button5)
         FlowLayoutPanel1.Dock = DockStyle.Top
         FlowLayoutPanel1.Location = New Point(0, 0)
         FlowLayoutPanel1.Name = "FlowLayoutPanel1"
@@ -112,6 +114,18 @@ Partial Class Form1
         SaveFileDialog1.Filter = "Texxxttt|*.txt"
         SaveFileDialog1.Title = "AAAAAAA"
         ' 
+        ' Button5
+        ' 
+        Button5.AutoSize = True
+        Button5.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        Button5.BackColor = Color.DodgerBlue
+        Button5.Location = New Point(781, 3)
+        Button5.Name = "Button5"
+        Button5.Size = New Size(285, 42)
+        Button5.TabIndex = 4
+        Button5.Text = "Schleifen und WinForms"
+        Button5.UseVisualStyleBackColor = False
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(13F, 32F)
@@ -134,5 +148,6 @@ Partial Class Form1
     Friend WithEvents Button4 As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
+    Friend WithEvents Button5 As Button
 
 End Class

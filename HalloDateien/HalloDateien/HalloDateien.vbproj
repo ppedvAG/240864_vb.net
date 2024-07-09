@@ -6,12 +6,24 @@
     <StartupObject>Sub Main</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
+    <UserSecretsId>6530861a-cf1e-4e20-98bb-eb68e54c6f74</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <Import Include="System.Data" />
     <Import Include="System.Drawing" />
     <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="HalloSchleifenUndWinForms">
+      <HintPath>..\..\HalloSchleifenUndWinForms\HalloSchleifenUndWinForms\bin\Debug\HalloSchleifenUndWinForms.exe</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>

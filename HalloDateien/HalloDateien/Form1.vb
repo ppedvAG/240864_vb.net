@@ -65,4 +65,8 @@ Public Class Form1
 
     End Function
 
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Dim f = New HalloSchleifenUndWinForms.Form1()
+        f.ShowDialog()
+    End Sub
 End Class
