@@ -92,9 +92,9 @@ Partial Class Form1
         Button4.BackColor = Color.DodgerBlue
         Button4.Location = New Point(648, 3)
         Button4.Name = "Button4"
-        Button4.Size = New Size(109, 42)
+        Button4.Size = New Size(127, 42)
         Button4.TabIndex = 3
-        Button4.Text = "Button4"
+        Button4.Text = "Hallo Sub"
         Button4.UseVisualStyleBackColor = False
         ' 
         ' TextBox1

@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 
 Public Class Form1
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         For index = 1 To 10
             TextBox1.Text += $"Alles wird gut {index}{vbCrLf}"
@@ -37,6 +38,31 @@ Public Class Form1
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
 
+        HalloSub(" ")
+        HalloSub("Ein Text")
 
     End Sub
+
+    Sub HalloSub()
+        MessageBox.Show("Hallo von der Sub", "TITEL " + GibMitFünf(23).ToString())
+        MessageBox.Show("Hallo von der Sub", "TITEL", MessageBoxButtons.CancelTryContinue, MessageBoxIcon.Hand)
+    End Sub
+
+    Sub HalloSub(msg As String)
+
+        If String.IsNullOrWhiteSpace(msg) Then
+            Return
+        End If
+
+        MessageBox.Show(msg)
+    End Sub
+
+    Function GibMitFünf(Optional multi As Integer = 1) As Integer
+
+        Return 5 * multi
+
+        MessageBox.Show("Wird nie aufgerufen")
+
+    End Function
+
 End Class
