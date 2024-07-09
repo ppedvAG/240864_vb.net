@@ -14,25 +14,22 @@ Module Module1
 
         Dim meinAuto As Fahrzeug 'deklaration
         meinAuto = New Fahrzeug() 'instanzieren
-        meinAuto.Hersteller = "Baudi"
+        'meinAuto.Hersteller = "Baudi"
+        meinAuto.SetHersteller("Baudi")
         meinAuto.Modell = "711"
-        meinAuto.KW = 19
+        meinAuto.KW = -19
         meinAuto.Getriebe = Getriebeart.Auto
         ShowFahrzeug(meinAuto)
 
         Dim deinAuto = New Fahrzeug()
-        deinAuto.Hersteller = "Skodaaaaaaaaaa"
+        'deinAuto.Hersteller = "Skodaaaaaaaaaa"
+        deinAuto.SetHersteller("Skodaaaaaaaaaa")
         deinAuto.Modell = "Käääääfa"
         deinAuto.KW = 683
         deinAuto.Getriebe = Getriebeart.Manuell
         ShowFahrzeug(deinAuto)
         MachDoppelSoSchnell(deinAuto)
         ShowFahrzeug(deinAuto)
-
-        Dim garage = New List(Of Fahrzeug)
-        While True
-            garage.Add(New Fahrzeug())
-        End While
 
 
         Console.WriteLine("ENDE")
@@ -48,7 +45,8 @@ Module Module1
     End Sub
 
     Sub ShowFahrzeug(einFahrzeug As Fahrzeug)
-        Console.WriteLine($"Hersteller: {einFahrzeug.Hersteller}{vbNewLine}Modell: {einFahrzeug.Modell}{vbNewLine}Leistung: {einFahrzeug.KW}KW{vbNewLine}Getriebe: {einFahrzeug.Getriebe}")
+        Console.WriteLine($"Hersteller: {einFahrzeug.GetHersteller}{vbNewLine}Modell: {einFahrzeug.Modell}{vbNewLine}Leistung: {einFahrzeug.KW}KW {einFahrzeug.PS}PS{vbNewLine}Getriebe: {einFahrzeug.Getriebe}")
+        einFahrzeug.Hupen()
         Console.WriteLine("-------------------------------------------------------------------------------")
     End Sub
 
