@@ -7,7 +7,7 @@ Module Module1
         Console.WriteLine("*** Hallo Klassen ***")
 
         Dim meineZahl As Integer = 12
-        Dim geld As Decimal = 185.3837
+        Dim geld As Decimal = 185.3837D
 
         Console.WriteLine(meineZahl)
         Verdoppeln(meineZahl)
@@ -35,6 +35,13 @@ Module Module1
         Dim unserAuto = New Fahrzeug("Xylophon")
         ShowFahrzeug(unserAuto)
 
+        Dim pkw As PKW = New PKW()
+        pkw.HatKofferraum = True
+        pkw.SetHersteller("Trabont")
+        pkw.Modell = "7er"
+
+        ShowFahrzeug(pkw)
+        'ShowPKW(unserAuto)
 
         Console.WriteLine("ENDE")
         Console.ReadKey()
@@ -53,5 +60,11 @@ Module Module1
         einFahrzeug.Hupen()
         Console.WriteLine("-------------------------------------------------------------------------------")
     End Sub
+
+    'Sub ShowPKW(pwk As PKW)
+    '    Console.WriteLine($"Sitze:{pwk.Sitze}{vbNewLine} Hersteller: {pwk.GetHersteller}{vbNewLine}Modell: {einFahrzeug.Modell}{vbNewLine}Leistung: {pwk.KW}KW {pwk.PS}PS{vbNewLine}Getriebe: {pwk.Getriebe}")
+    '    pwk.Hupen()
+    '    Console.WriteLine("-------------------------------------------------------------------------------")
+    'End Sub
 
 End Module

@@ -9,7 +9,7 @@
 
     Public ReadOnly Property PS As Integer 'read-only property
         Get
-            Return KW / 4
+            Return KW * 2
         End Get
     End Property
 
@@ -67,9 +67,6 @@
     ''' <param name="hersteller">The manufacturer</param>
     ''' <param name="modell">the model of the v</param>
     Sub New(hersteller As String, modell As String)
-        If hersteller.StartsWith("X") Then
-            Throw New OutOfMemoryException() 'höhöhöhö
-        End If
 
         Me.Hersteller = hersteller
         _modell = modell
