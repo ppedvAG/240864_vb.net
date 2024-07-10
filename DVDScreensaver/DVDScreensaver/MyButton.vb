@@ -23,3 +23,9 @@ Public Class MyButton
     End Sub
 
 End Class
+
+
+Class myCheckbox
+    Inherits CheckBox
+
+End Class
