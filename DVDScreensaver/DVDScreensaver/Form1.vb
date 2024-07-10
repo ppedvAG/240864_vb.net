@@ -3,9 +3,9 @@
     Dim speedY As Integer = 6
     Dim speedX As Integer = 6
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        SwitchYDirection()
-        SwitchXDirection()
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+        SwitchYDirection
+        SwitchXDirection
     End Sub
 
     Sub SwitchYDirection()
