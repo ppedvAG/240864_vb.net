@@ -16,18 +16,18 @@ Public Class Form1
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
-        'TextBox1.Text = File.ReadAllText("text.txt")
         Dim opendlg = New OpenFileDialog()
         opendlg.Filter = "Textkram|*.txt|Den rest|*.*"
         If opendlg.ShowDialog() = DialogResult.OK Then
 
             Dim sr = New StreamReader(opendlg.FileName)
+            Dim lineNumber As Integer = 1
 
             While Not sr.EndOfStream
 
                 Dim line = sr.ReadLine()
-
-                TextBox1.Text += line + vbCrLf
+                TextBox1.Text += lineNumber.ToString() + ": " + line + vbCrLf
+                lineNumber += 1
 
             End While
             sr.Close()

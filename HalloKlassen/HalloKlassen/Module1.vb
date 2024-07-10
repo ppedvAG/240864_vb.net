@@ -32,7 +32,7 @@ Module Module1
         MachDoppelSoSchnell(deinAuto)
         ShowFahrzeug(deinAuto)
 
-        Dim unserAuto = New Fahrzeug()
+        Dim unserAuto = New Fahrzeug("Xylophon")
         ShowFahrzeug(unserAuto)
 
 

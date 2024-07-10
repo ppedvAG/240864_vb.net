@@ -2,6 +2,7 @@
 
     Private Hersteller As String
 
+
     Public Property KW As Integer 'Auto-Property 
 
     Public Property Getriebe As Getriebeart 'Auto-Property
@@ -39,6 +40,12 @@
         End If
     End Sub
 
+    ''' <summary>
+    ''' Mach lustige geräusche
+    ''' </summary>
+    ''' <remarks>
+    ''' HUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUP
+    ''' </remarks>
     Public Sub Hupen()
         Console.WriteLine("Huuuup")
     End Sub
@@ -47,10 +54,23 @@
     Sub New() 'default konstruktor
         'Console.WriteLine("NEUES FAHRZEUG")
         'Hersteller = "NEU"
-        Me.New("NEU", "HEU")
+        Me.New("NEU")
     End Sub
 
+    Sub New(hersteller As String)
+        Me.New(hersteller, "Heu")
+    End Sub
+
+    ''' <summary>
+    ''' Create a new vehicle
+    ''' </summary>
+    ''' <param name="hersteller">The manufacturer</param>
+    ''' <param name="modell">the model of the v</param>
     Sub New(hersteller As String, modell As String)
+        If hersteller.StartsWith("X") Then
+            Throw New OutOfMemoryException() 'höhöhöhö
+        End If
+
         Me.Hersteller = hersteller
         _modell = modell
     End Sub

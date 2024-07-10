@@ -13,17 +13,18 @@
         ChangeColor()
     End Sub
 
-
-    Private Sub ChangeColor()
-        Task.Run(Sub() Console.Beep(220, 400))
-        Dim ran = New Random()
-        Button1.BackColor = Color.FromArgb(ran.Next(255), ran.Next(255), ran.Next(255))
-    End Sub
-
     Sub SwitchXDirection()
         speedX = speedX * -1
         ChangeColor()
     End Sub
+
+    Private Sub ChangeColor()
+        'Task.Run(Sub() Console.Beep(220, 400))
+        Dim ran = New Random()
+        Button1.BackColor = Color.FromArgb(ran.Next(255), ran.Next(255), ran.Next(255))
+    End Sub
+
+
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
