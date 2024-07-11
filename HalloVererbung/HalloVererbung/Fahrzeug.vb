@@ -29,12 +29,12 @@ Public Class LuftkissenBoot
 End Class
 
 Public MustInherit Class Fahrzeug
-
+    Inherits Object
 
     Public Property Hersteller As String
     Public Property Modell As String
     Public Property KW As Integer
-    Public Property Getriebe As Getriebeart
+    Public Overridable Property Getriebe As Getriebeart
 
     Public Overridable Sub Hupen()
         Console.WriteLine("Fahrzeug macht *Huuuup*")
